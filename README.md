@@ -1,1 +1,1 @@
-https://luisisawayy.github.io/Lab2_110/
+https://luisisawayy.github.io/sp25-cse110-lab3/
