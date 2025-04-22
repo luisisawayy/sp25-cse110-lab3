@@ -121,3 +121,80 @@
       grid-template-columns: 1fr;
     }
   }
+
+  /* Class Selector */
+.highlight {
+    background-color: yellow;
+  }
+  
+  /* ID Selector */
+  #media {
+    padding: 1em;
+  }
+  
+  /* Universal Selector */
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Element Selector */
+  section {
+    background-color: #f9f9f9;
+  }
+  
+  /* Attribute Selector */
+  input[type="text"] {
+    border: 1px solid gray;
+  }
+  
+  /* Pseudo-class Selector */
+  input:hover {
+    background-color: #e0f7fa;
+  }
+  
+  /* Selector List */
+  h1, h2 {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Combinators */
+  section > p {
+    color: green;
+  }
+  
+  section p {
+    font-style: italic;
+  }
+  
+  p + p {
+    margin-top: 2rem;
+  }
+  
+  p ~ label {
+    font-style: italic;
+  }
+  
+  /* Combining Selectors */
+  input.highlight {
+    border: 2px solid red;
+  }
+  
+  /* New Selectors */
+  form:has(textarea) {
+    background-color: #ffe;
+  }
+  
+  section:has(img) {
+    border: 2px dotted blue;
+  }
+  
+  /* Nested Selectors (new 2023 feature) */
+  @scope (main) {
+    section {
+      padding: 1rem;
+      h2 {
+        color: navy;
+      }
+    }
+  }
+  
