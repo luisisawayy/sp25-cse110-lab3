@@ -188,11 +188,13 @@
     border: 2px dotted blue;
   }
   
-  /* Scoped Styles using Classes */
-  .main-scope section {
-    padding: 1rem;
+  /* Nested Selectors (new 2023 feature) */
+  @scope (main) {
+    section {
+      padding: 1rem;
+      h2 {
+        color: navy;
+      }
+    }
   }
-
-  .main-scope section h2 {
-    color: navy;
-  }
+  
