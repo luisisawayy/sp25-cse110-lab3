@@ -1,0 +1,123 @@
+/* === CSS VARIABLES & FALLBACKS === */
+:root {
+    --main-color: #4CAF50;
+    --secondary-color: orange;
+    --border-style: dashed;
+    --fallback-color: var(--made-up-color, purple); /* fallback example */
+  }
+  
+  /* === GENERAL STYLES === */
+  body {
+    font-family: 'Roboto', sans-serif; /* Use a Google Font */
+    background-color: hsl(210, 40%, 95%);
+    color: color(display-p3 0.1 0.2 0.3 / 0.9); /* Wider-gamut color */
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* === HEADER === */
+  header {
+    background-color: var(--main-color);
+    padding: 20px;
+    color: white;
+    text-align: center;
+  }
+  
+  /* === MARGINS AND PADDING === */
+  section {
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    margin-left: 10px; /* longhand */
+    padding: 1em 2em 1em 2em; /* shorthand */
+  }
+  
+  /* === BORDER EXAMPLES === */
+  img {
+    border-style: var(--border-style);
+    border-width: 3px;
+    border-color: var(--secondary-color);
+    border-radius: 12px;
+    max-width: 100%;
+  }
+  
+  /* === UNITS === */
+  h2 {
+    margin-top: 2rem;     /* relative */
+    margin-bottom: 3vw;   /* relative */
+    font-size: 24px;      /* absolute */
+    line-height: 1.5em;   /* relative */
+  }
+  
+  /* === TEXT STYLES === */
+  p {
+    color: color-mix(in srgb, orange 40%, black);
+    text-align: justify;
+  }
+  
+  /* === DISPLAY PROPERTIES === */
+  nav, details {
+    display: block;
+  }
+  
+  video {
+    display: inline-block;
+  }
+  
+  /* === SIZING === */
+  #media img {
+    height: auto;
+    width: 400px;
+    max-width: 100%;
+    min-width: 250px;
+  }
+  
+  /* === POSITION === */
+  footer {
+    position: sticky;
+    bottom: 0;
+    background-color: #ddd;
+    padding: 10px;
+  }
+  
+  /* === PSEUDO-CLASSES === */
+  a:hover {
+    color: red;
+  }
+  
+  button:active {
+    background-color: black;
+    color: white;
+  }
+  
+  /* === FLEXBOX === */
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  /* === GRID === */
+  #form form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  /* === RESPONSIVENESS === */
+  @media screen and (max-width: 600px) {
+    header {
+      font-size: 0.8rem;
+    }
+  
+    nav {
+      flex-direction: column;
+    }
+  
+    #form form {
+      grid-template-columns: 1fr;
+    }
+  }
