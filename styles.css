@@ -167,7 +167,8 @@
     border: 2px dotted blue;
   }
   
-  @scope (main) {
+  @scope (main) 
+  {
     section {
       h2 {
         color: navy;
