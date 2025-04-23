@@ -1,21 +1,21 @@
-/* === CSS VARIABLES & FALLBACKS === */
+/* CSS vars and fallback */
 :root {
     --main-color: #4CAF50;
     --secondary-color: orange;
     --border-style: dashed;
-    --fallback-color: var(--made-up-color, purple); /* fallback example */
+    --fallback-color: var(--made-up-color, purple); /* Fallback example */
   }
   
-  /* === GENERAL STYLES === */
+  /* Styles */
   body {
-    font-family: 'Roboto', sans-serif; /* Use a Google Font */
+    font-family: 'Roboto', sans-serif; /* Google Font */
     background-color: hsl(210, 40%, 95%);
-    color: color(display-p3 0.1 0.2 0.3 / 0.9); /* Wider-gamut color */
+    color: color(display-p3 0.1 0.2 0.3 / 0.9);
     margin: 0;
     padding: 0;
   }
   
-  /* === HEADER === */
+  /* Header */
   header {
     background-color: var(--main-color);
     padding: 20px;
@@ -23,64 +23,57 @@
     text-align: center;
   }
   
-  /* === MARGINS AND PADDING === */
+  /* Nav Style (with RGB + fallback font */
+  nav {
+    background-color: rgba(100, 100, 255, 0.3);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  /* section margins and padding */
   section {
     margin-top: 20px;
     margin-right: 10px;
     margin-bottom: 20px;
-    margin-left: 10px; /* longhand */
-    padding: 1em 2em 1em 2em; /* shorthand */
+    margin-left: 10px; /* Longhand */
+    padding: 1em 2em 1em 2em; /* Shorthand */
+    background-color: #f9f9f9;
   }
   
-  /* === BORDER EXAMPLES === */
+  /* img and borders */
   img {
     border-style: var(--border-style);
     border-width: 3px;
     border-color: var(--secondary-color);
     border-radius: 12px;
+    display: block;
+    margin: auto;
     max-width: 100%;
   }
   
-  /* === UNITS === */
+  /* jheadings */
   h2 {
-    margin-top: 2rem;     /* relative */
-    margin-bottom: 3vw;   /* relative */
-    font-size: 24px;      /* absolute */
-    line-height: 1.5em;   /* relative */
+    margin-top: 2rem; /* relative unit */
+    margin-bottom: 3vw; /* relative unit */
+    font-size: 24px; /* absolute unit */
+    line-height: 1.5em; /* relative unit */
+    color: navy;
   }
   
-  /* === TEXT STYLES === */
+  /* texts */
   p {
     color: color-mix(in srgb, orange 40%, black);
     text-align: justify;
   }
   
-  /* === DISPLAY PROPERTIES === */
-  nav, details {
-    display: block;
+  /* button and link interactions */
+  a {
+    text-decoration: underline;
   }
   
-  video {
-    display: inline-block;
-  }
-  
-  /* === SIZING === */
-  #media img {
-    height: auto;
-    width: 400px;
-    max-width: 100%;
-    min-width: 250px;
-  }
-  
-  /* === POSITION === */
-  footer {
-    position: sticky;
-    bottom: 0;
-    background-color: #ddd;
-    padding: 10px;
-  }
-  
-  /* === PSEUDO-CLASSES === */
   a:hover {
     color: red;
   }
@@ -90,16 +83,23 @@
     color: white;
   }
   
-  /* === FLEXBOX === */
-  nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 1rem;
-    flex-wrap: wrap;
+  /* form and media */
+  #media img {
+    height: auto;
+    width: 400px;
+    max-width: 100%;
+    min-width: 250px;
   }
   
-  /* === GRID === */
+  /* positioning */
+  footer {
+    position: sticky;
+    bottom: 0;
+    background-color: #ddd;
+    padding: 10px;
+  }
+  
+  /* grid layout in form */
   #form form {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -107,7 +107,7 @@
     align-items: center;
   }
   
-  /* === RESPONSIVENESS === */
+  /* Responsiveness */
   @media screen and (max-width: 600px) {
     header {
       font-size: 0.8rem;
@@ -121,49 +121,26 @@
       grid-template-columns: 1fr;
     }
   }
-
-  /* Class Selector */
-.highlight {
+  
+  /* Selectors! */
+  .highlight {
     background-color: yellow;
   }
   
-  /* ID Selector */
   #media {
     padding: 1em;
   }
   
-  /* Universal Selector */
   * {
     box-sizing: border-box;
   }
   
-  /* Element Selector */
-  section {
-    background-color: #f9f9f9;
-  }
-  
-  /* Attribute Selector */
-  input[type="text"] {
-    border: 1px solid gray;
-  }
-  
-  /* Pseudo-class Selector */
-  input:hover {
-    background-color: #e0f7fa;
-  }
-  
-  /* Selector List */
-  h1, h2 {
-    font-family: 'Arial', sans-serif;
-  }
-  
-  /* Combinators */
-  section > p {
-    color: green;
-  }
-  
   section p {
     font-style: italic;
+  }
+  
+  section > p {
+    color: green;
   }
   
   p + p {
@@ -174,12 +151,14 @@
     font-style: italic;
   }
   
-  /* Combining Selectors */
+  input[type="text"] {
+    border: 1px solid gray;
+  }
+  
   input.highlight {
     border: 2px solid red;
   }
   
-  /* New Selectors */
   form:has(textarea) {
     background-color: #ffe;
   }
@@ -188,13 +167,12 @@
     border: 2px dotted blue;
   }
   
-  /* Nested Selectors (new 2023 feature) */
   @scope (main) {
     section {
-      padding: 1rem;
       h2 {
         color: navy;
       }
     }
   }
+  
   
