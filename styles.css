@@ -166,13 +166,6 @@
   section:has(img) {
     border: 2px dotted blue;
   }
-  
-  @scope (main) {
-    section {
-      h2 {
-        color: navy;
-      }
-    }
-  }
+
   
   
